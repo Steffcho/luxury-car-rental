@@ -23,7 +23,7 @@ class Database {
                 password: '',
                 database: 'rentals'
             });
-            console.log('✅ Connected to MySQL!');
+            console.log('Connected to MySQL!');
         });
     }
 }

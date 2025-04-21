@@ -1,17 +1,10 @@
-// userRoutes.ts
 import { Router } from 'express';
-import {
-  getAllUsers,
-  getUserById,
-  createUser,
-  updateUser,
-  deleteUser
-} from '../controllers/userControllers';
+import { userController } from '../controllers/userControllers';
 
 export const userRoutes = Router();
 
-userRoutes.get('/', getAllUsers);
-userRoutes.get('/:id', getUserById);
-userRoutes.post('/', createUser);
-userRoutes.put('/:id', updateUser);
-userRoutes.delete('/:id', deleteUser);
+userRoutes.post('/', userController.createUser);
+userRoutes.get('/', userController.getAllUsers);
+userRoutes.get('/:id', userController.getUserById);
+userRoutes.put('/:id', userController.updateUser);
+userRoutes.delete('/:id', userController.deleteUser);
